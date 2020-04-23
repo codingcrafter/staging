@@ -1,0 +1,376 @@
+/*
+Theme Name: Evan
+Description: Runningfish
+Author: Runningfish
+Template: Divi
+*/
+
+@font-face {
+    font-family: Spin Cycle;  
+    src: url(https://evandrews.me/wp-content/themes/Evan/includes/fonts/spincycle_ot.otf);
+    src: url(https://evandrews.me/wp-content/themes/Evan/includes/fonts/spincycle_ot.woff);
+}
+
+/* Set the defaults */
+:root {
+	/* EDIT THESE FIRST */
+--color-primary: #000;
+--color-secondary: #ff0f6f;
+--color-tertiary: ;
+--primary-font: 'Archivo Black';
+--font-light: #FFF;
+--font-dark: #000;
+--button-border-radius: 0;
+--button-bg-1: transparent;
+--button-bg-2: ;
+--button-border-style: none;
+	/* Shadows */
+--color-primary-background: rgba(235,235,255, .1);
+--color-primary-shadow: rgba(255,255,255,.9);
+--color-text-shadow: rgba(68, 68, 68.9);
+--shadow-above-bar: 0px -1px 10px var(--color-primary-shadow);
+	/* Buttons */
+--button-text-color: var(--font-dark);
+--button-font-size: 1.25rem;
+--button-font-weight: 400;
+--button-border: var(--button-border-style) var(--color-primary);
+	/* Hover */
+--button-hover-text-color: var(--color-secondary);	
+--button-hover-stencil: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+--button-hover-bg: var(--button-bg-1);
+--button-hover-border-radius: 0;
+--button-hover-border: none;
+	/* Enhanced Mobile */
+--home-button-color: #FF0000;
+--mobile-border-radius: 0;
+--font-size-mobile: 1.2rem;
+}
+
+body { font-size: 16px; }
+h1, .et_pb_post h1 { font-size: 3em; }
+h2, .et_pb_post h2 { font-size: 2.7em; }
+h3, .et_pb_post h3 { font-size: 2.3em; }
+h4, .et_pb_post h4 { font-size: 2em; }
+h5, .et_pb_post h5 { font-size: 1.7em; }
+h6, .et_pb_post h6 { font-size: 1.3em; }
+
+@media (max-width: 480px) {
+    h1, .et_pb_post h1 { font-size: 2.5em; }
+    h2, .et_pb_post h2 { font-size: 2.1em; }
+    h3, .et_pb_post h3 { font-size: 1.5em; }
+    h4, .et_pb_post h4 { font-size: 1.3em; }
+    h5, .et_pb_post h5 { font-size: 1.2em; }
+    h6, .et_pb_post h6 { font-size: 1.1em; }
+}
+
+/*---------------------------------------------
+----------Styling For Buttons------------------
+---------------------------------------------*/
+
+/* Hover Styling */
+.woocommerce #respond input#submit:hover, .et_button_no_icon .et_pb_button:hover, .woocommerce-page #respond input#submit:hover, .et_pb_button:hover, .tnp-field-button:hover, .tnp-subscription input[type="submit"]:hover, #btn-1:hover, #btn-2:hover {
+	background-color: var(--button-hover-bg) !important;
+	border-radius: var(--button-hover-border-radius);
+	padding: .3rem 1rem;
+	border: var(--button-hover-border);
+	color: var(--button-hover-text-color);
+	font-family: var(--primary-font);
+	text-transform: uppercase;
+	font-weight: var(--button-font-weight);
+	cursor: pointer;
+	font-size: var(--button-font-size);
+	letter-spacing: 0.25rem;
+}
+/* Hover Styling */
+
+
+.woocommerce #respond input#submit, .woocommerce-page #respond input#submit, .et_pb_button, .tnp-field-button, .et_button_no_icon .et_pb_button, .tnp-subscription input[type="submit"], #btn-1, #btn-2 {
+	border-radius: var(--button-border-radius);
+	line-height: 2rem;
+	padding: .3rem 1rem;
+	border: var(--button-border);
+	color: var(--button-text-color);
+	background-color: var(--button-hover-bg) !important;
+	font-family: var(--primary-font);
+	text-transform: uppercase;
+	font-weight: var(--button-font-weight);
+	cursor: pointer;
+	font-size: var(--button-font-size);
+	letter-spacing: 0.25rem;
+	transition: ease 300ms;
+}
+
+/* Gravity Forms */
+.gform_button:hover {color: var(--font-light); background-color: var(--color-secondary);}
+.gform_button {color: var(--color-secondary); border-radius: 50rem; border: 2px solid var(--color-secondary); font-size: 1.5rem !important; padding: .3rem 1rem; text-transform: uppercase; font-weight: 700; cursor: pointer; transition: 300ms ease; background-color: transparent;}
+.gform_button.light-contrast {border-color: var(--font-light); color: var(--font-light); background-color: none;}
+.gform_button.light-contrast:hover {background-color: var(--font-light); color: var(--color-secondary) !important;}
+.gform_button.light-contrast:hover, .gform_button.dark-contrast:hover {box-shadow: 0 12px 18px -12px rgba(0,0,0, .5);}
+
+.hero-buttons {
+    transform: scale(1);
+    width: 100%;
+    z-index: 3;
+    letter-spacing: 0.25rem;
+    text-transform: uppercase;
+}
+
+#btn-1, #btn-2 {
+    color: var(--font-dark);
+    display: block;
+}
+
+/* Hero Links */
+.hero-nav {display: block; padding: 1rem 0 3rem;}
+.hero-nav .nav-links {padding: 0;}
+.nav-links {list-style: none; display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; justify-content: center;}
+.nav-links, .nav-btn {margin: 0; padding: 0;}
+.nav-links li {list-style-image: none; list-style-type: none; margin-left: 0; position: relative;}
+.hero-nav a {display: block; padding: 16px 80px;}
+/*.hero-nav a::before, .hero-nav a::after {display: block; position: absolute; bottom: 38px; left: 50%; width: 1px; height: 3px; background: #000; content: ''; -moz-transition: height 0.2s ease; -o-transition: height 0.2s ease; -webkit-transition: height 0.2s ease; transition: height 0.2s ease;}
+.hero-nav a::after {top: 40px; bottom: auto;}
+.hero-nav a:hover::before, .hero-nav a:hover::after {height: 10px; background-color: var(--color-secondary);}*/
+
+/*---------------------------------------------
+---------END Styling For Buttons---------------
+---------------------------------------------*/
+
+
+/*---------------------------------------------
+------------BEGIN Theme Fixes------------------
+---------------------------------------------*/
+body {background-color: #FFF !important;}
+strong {color: var(--color-secondary);}
+#main-content .container::before {background-color: transparent !important;}
+#main-content .container::before {background-color: transparent;}
+#evans-body .mobile_menu_bar::before, #evans-body .et_toggle_slide_menu::before, #evans-body .mobile_menu_bar::after, #evans-body .et_toggle_slide_menu::after {color: var(--color-secondary);}
+
+#main-footer #footer-info {text-align: center; float: none;}
+#footer-widgets .footer-widget li::before {display: none;}
+#footer-widgets .footer-widget li {padding-left: 0;}
+#footer {position: relative; z-index: 10;}
+/*
+#main-footer .footer-widget {margin: 0;}
+#main-footer .et_pb_widget {float: none; text-align: center;}
+#main-footer .footer-widget h4 {font-size: 6vw; text-transform: uppercase;}
+#main-footer .gform_wrapper form {text-align: center;}*/
+
+/* Divi Posts Overrides */
+#left-area .post-meta a {color: var(--color-secondary);}
+
+/* Fullwidth No Padding Sections & Rows */
+.fullscreen-box {padding: 0 !important;}
+
+.swatches {padding-bottom: 0 !important;}
+
+/* Hide the scrollbar */
+html::-webkit-scrollbar, html::-webkit-scrollbar-thumb, html::-webkit-scrollbar-track {display: none !important; width: 0px !important; -webkit-appearance: none !important; background: transparent !important;}
+html#evan {scrollbar-width: none !important;}
+html#evan {-ms-overflow-style: none !important;}
+
+.mb-track {border-radius: 5px; position: absolute; border-radius: 5px; -webkit-transition: opacity 250ms; transition: opacity 250ms;}
+.mb-bar {background-color: var(--color-secondary); height: 0px; position: absolute; z-index: 10; transform-style: preserve-3d;}
+.mb-progress .mb-bar {min-height: 0;}
+.mb-progress {overflow: hidden;}
+.mb-track-y .mb-bar, .mb-track-x .mb-bar {right: 0; top: 0;}
+.mb-track-x {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 10px;
+    opacity: 0;
+}
+.mb-track-y {
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 10px;
+    opacity: 0;
+}
+body > .mb-container > .mb-track {background-color: #fff;}
+/*---------------------------------------------
+--------------END Theme Fixes------------------
+---------------------------------------------*/
+
+/*----------------------------------------------
+------------Social Media Inline Fix-------------
+--------use shortcode [et_social_media]---------
+-------Use Custom HTML Widget and NO title------
+----------------------------------------------*/
+#icon-inline-et {
+	display: inline-block;
+	float: none;
+}
+
+#icon-inline-et ul.ul-social-et {
+	display: inline-block !important;
+	float: none !important;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+#icon-inline-et li.evan-social-icon {
+	float: left !important;
+	padding-left: 12px;
+}
+/*----------------------------------------------
+----------END Social Media Inline Fix-----------
+--------use shortcode [et_social_media]---------
+----------------------------------------------*/
+
+.grecaptcha-badge {display: none;}
+
+/*-----------Main Styling-------------
+--------------------------------------
+------------------------------------*/
+.bold-headers {font-family: var(--primary-font);}
+
+span.intro {font-size: 4rem;}
+span.intro-2 {color: var(--font-dark);}
+span.highlighter {color: var(--color-secondary);}
+span.highlighter-alt {color: var(--color-tertiary);}
+span.hand-writing {font-family: 'covered by your grace';}
+
+/* Custom Horizontal Scrolling Parallax */
+.hero-two {overflow: hidden; position: relative; min-height: 490px; display: flex; -webkit-display: flex;} 
+.para-ele {position: relative; width: 100%; font-size: 12.5vw; font-family: 'Archivo Black', Sans-serif, Arial; font-weight: 900; text-transform: uppercase; white-space: nowrap;}
+.about-ele {font-size: 10rem; font-weight: 900; text-transform: uppercase; color: black; text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;}
+#hero-first {left: 20%; color: #fff; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;} 
+#hero-second {left: -35%; bottom: 30%; z-index: -1; color: #000;}
+
+/* Portfolio Section */
+.portfolio-section {padding: 0 !important;}
+.portfolio-row {padding: 0 !important;}
+.portfolio-section .et_pb_column_1_2 {width: 50%; margin:0 !important;}
+.portfolio-item .item-img {width: 100%; display: block; padding: 7rem 0 6rem; text-align: center;}
+.portfolio-item .item-img img {max-width: 80%;}
+.portfolio-item h2 {font-size: 4vw; color: #fff;}
+.portfolioitem p {font-weight: 600;}
+.portfolio-item a {display: block;}
+.portfolio-item .portfolio-tooltip:hover {opacity: 1;}
+.portfolio-item .right-top {background-image: linear-gradient(to right top, rgba(0,0,0, .1), rgba(0,0,0, .8));}
+.portfolio-item .left-bottom {background-image: linear-gradient(to left bottom, rgba(0,0,0, .1), rgba(0,0,0, .8));}
+.portfolio-item .left-top {background-image: linear-gradient(to left top, rgba(0,0,0, .1), rgba(0,0,0, .8));}
+.portfolio-item .right {background-image: linear-gradient(to right, rgba(0,0,0, .1), rgba(0,0,0, .8));}
+.portfolio-item .left {background-image: linear-gradient(to right bottom, rgba(0,0,0, .1), rgba(0,0,0, .8));}
+
+/* New Portfolio Section 04_07_20 */
+.portfolio-section-2 .et_pb_bottom_inside_divider {-webkit-filter: drop-shadow(0px -4px 4px rgba(0,0,0, .3)); -ms-filter: drop-shadow(0px -4px 4px rgba(0,0,0, .3)); filter: drop-shadow(0px -4px 4px rgba(0,0,0, .3));}
+.portfolio-section-2 .port-logo img {-webkit-filter: drop-shadow(2px 4px 2px rgba(0,0,0,.3)); -ms-filter: drop-shadow(2px 4px 2px rgba(0,0,0,.3)); filter: drop-shadow(2px 4px 2px rgba(0,0,0,.3));}
+.port-rtl span, .port-ltr span {
+    font-size: 10vw;
+    white-space: nowrap;
+    font-family: archivo black;
+    color: rgba(255,255,255, .1);
+    text-transform: uppercase;
+    position: absolute;
+}
+
+/* Portfolio Pages */
+.port-ele-1 {left: 35%; color: #fff; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;} 
+.port-ele-2 {left: -50%; bottom: 30%; z-index: -1; color: #000;}
+
+.hex-codes {padding: 0;}
+.hex-codes .et_pb_column {margin-right: 0 !important;}
+.hex-codes .et_pb_column {width: 20% !important;}
+.hex-codes .et_pb_text_inner {text-align: center; font-size: 1.25vw;}
+
+.port-headers .et_pb_code_inner {overflow: hidden;}
+
+/* Portfolio Typography */
+.typography .et_pb_text_inner {color: #000;}
+.open {font-family: 'Open Sans';}
+.rale {font-family: 'Raleway';}
+
+.port-h1 {font-size: 3rem;}
+.port-h2 {font-size: 2.25rem;}
+.port-h3 {font-size: 1.5rem;}
+.port-h1, .port-h2, .port-h3 {color: #000;}
+
+/* Input Fields */
+.gform_body input, .gform_body textarea, #user_login, #user_pass {background-color: rgba(200,75,200, .03); box-shadow: 0 0 20px rgba(0,0,0,.17); border: none; border-bottom: 1px solid var(--color-secondary); border-radius: 2px;}
+.gfield_label {color: var(--font-dark); font-family: 'Archivo'; font-weight: 900 !important; text-transform: uppercase; display: none !important;}
+.gform_wrapper .gfield_required {color: var(--color-secondary) !important;}
+.gform_wrapper input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="image"]):not([type="file"]), .username input, .password input {padding: 15px 4px !important;}
+.password, .username, .rememberme {margin-bottom: 1.5%;}
+.password input, .username input {width: 50%;}
+
+.icons-row .evan-fa i {color: var(--color-secondary);}
+.icons-row .evan-fa h5 {color: var(--font-light);}
+
+/* Footer Socials */
+.evan-social-icon .icon::before {font-size: 24px;}
+/*-----------------------------------
+-------------------------------------
+-------End Main Styling------------*/
+
+@media only screen and (min-width: 981px) {
+    .icons-row h5 {font-size: .75vw;}
+    .portfolio-tooltip {
+    opacity: 0;
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    width: 100%; 
+    height: 100%; 
+    background-image: radial-gradient(rgba(0,0,0,.9), rgba(0,0,0, .3));
+    padding: 15px; 
+    -moz-transition: all 0.4s ease-in-out 0s; 
+    -webkit-transition: all 0.4s ease-in-out 0s; 
+    -ms-transition: all 0.4s ease-in-out 0s; 
+    transition: all 0.4s ease-in-out 0s;
+    }
+    .portfolio-text {
+    text-align: center;
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-moz-transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+    }
+    .portfolio-header h6 {font-size: 3.33rem;}
+    .portfolio-header h1 {font-size: 1.75rem;}
+    #footer-widgets > .footer-widget:nth-child(3) {text-align: right;}
+}
+@media only screen and (max-width: 980px) {
+    .et_hide_mobile_logo #main-header .logo_container {opacity: 100% !important; display: inline-block !important;}
+    #btn-1, #btn-2 {font-size: 1.25rem;} #btn-1:hover, #btn-2:hover {font-size: 1.25rem;}
+    .evan-hero .header-content {margin: 0 auto !important;}
+    #gform_wrapper_1 .gfield {padding: 0;}
+    #main-footer #footer-widgets .footer-widget {width: 100% !important;}
+    #main-footer .footer-widget h4 {font-size: 9vw;}
+    #gform_wrapper_1 #field_1_2 {padding-right: 1.5%;}
+    #gform_wrapper_1 #field_1_3 {padding-left: 1.5%;}
+    .typography .et_pb_text_inner {text-align: center;}
+    .portfolio-tooltip {position: relative;background-color: #000;}
+    .right-item .portfolio-tooltip {background-color: #333;}
+    .portfolio-text {display: block; max-width: 80%; margin: 0 auto; padding: 5% 0; text-align: center;}
+    .portfolio-text img {display: none;}
+    #gform_1 .gform_button {padding: 0;}
+    #icon-inline-et li.evan-social-icon {padding-left: 0; padding-right: 12px;}
+
+    /* Alternating Sections With Flexbox */
+    .alternating-flex {display: flex; flex-direction: column-reverse;}
+}
+
+/* IPAD Divi Breakpoint */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Mobile */
+@media only screen and (max-width: 480px) {
+    #btn-1, #btn-2 {font-size: .8rem;} #btn-1:hover, #btn-2:hover {font-size: .8rem;}
+    .hero-nav {padding: 1rem 0 2rem;}
+    .icons-row .et_pb_column {display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;} .icons-row .evan-fa {flex: 1;}
+    .portfolio-item h2 {font-size: 8vw;}
+    .evan-fa h5 {font-size: 14px;}
+    .hex-codes .et_pb_text_inner {font-size: 2vw;}
+    .portfolio-header h6 {font-size: 2.75rem;}
+    .portfolio-header h1 {font-size: 1.25rem;}
+}
